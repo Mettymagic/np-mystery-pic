@@ -60,7 +60,7 @@ def scanImage(path):
                 draw = ImageDraw.Draw(im)
                 draw.ellipse((x-20, y-20, x+20, y+20), fill=None, outline="red")
                 # saves image
-                im.save(os.path.join(MATCH_DIRECTORY, "match%d.png" % matchNum))
+                im.save(MATCH_DIRECTORY + "/match%d.png" % matchNum)
                 return
 
 # =====================================================================================================
