@@ -1,1 +1,3 @@
-images/matches/r.*
+/images/
+/matches/
+/r.*
