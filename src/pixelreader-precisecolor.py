@@ -85,6 +85,10 @@ for hex in h:
     rgbs.append(rgb)
 print("Searching %d images for %d color(s) " % (len(img_list), len(rgbs)), rgbs)
 
+# create matches directory if it doesn't exist
+if not os.path.exists(MATCH_DIRECTORY):
+    os.makedirs(MATCH_DIRECTORY)
+    
 # clears the match
 files = glob.glob("%s/*" % MATCH_DIRECTORY)
 for f in files:

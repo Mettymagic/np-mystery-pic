@@ -132,6 +132,10 @@ n_threads = os.cpu_count()
 split_list = split(img_list, n_threads)
 print("Using %d threads to find results." % n_threads)
 
+# create matches directory if it doesn't exist
+if not os.path.exists(MATCH_DIRECTORY):
+    os.makedirs(MATCH_DIRECTORY)
+
 # start thread work
 n_complete = 0
 matchNum = 0
